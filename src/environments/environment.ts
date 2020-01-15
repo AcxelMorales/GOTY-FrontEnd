@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseUrlService: 'http://localhost:5000/game-of-the-year-762d7/us-central1',
+  firebase: {
+    apiKey: "AIzaSyCzJ-wGaRIdzaTZhmpDgaHHocZSV6W0O7E",
+    authDomain: "game-of-the-year-762d7.firebaseapp.com",
+    databaseURL: "https://game-of-the-year-762d7.firebaseio.com",
+    projectId: "game-of-the-year-762d7",
+    storageBucket: "game-of-the-year-762d7.appspot.com",
+    messagingSenderId: "605327241285",
+  }
 };
 
 /*

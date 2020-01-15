@@ -1,1 +1,125 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+hr {
+  background-color: #ffffff;
+}
+
+.chart-container {
+  display: grid;
+  height: 400px;
+}
+
+.card-columns {
+  column-count: 1;
+}
+
+@media (max-width: 600px) {
+  .chart-legend {
+    display: none !important;
+  }
+
+  ngx-charts-bar-vertical {
+    margin: 10px;
+  }
+
+  .home-title,
+  .vote-title {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+img.logo {
+  margin-right: .5em;
+  margin-top: -11px;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.lds-hourglass {
+  margin-top: 10em;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}

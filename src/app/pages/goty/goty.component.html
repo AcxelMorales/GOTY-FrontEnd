@@ -1,0 +1,20 @@
+<h2 class="vote-title">Vote for the game of the year</h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <div class="loading animated fadeIn" *ngIf="!okLoading">
+      <div class="lds-hourglass"></div>
+    </div>
+
+    <div class="card-columns animated fadeIn" *ngIf="okLoading">
+      <div class="card bg-dark" *ngFor="let g of games">
+        <img [src]="g.url" class="card-img-top img-fluid" [alt]="g.name">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold">{{ g.name }}</h5>
+          <p class="card-text text-muted">Click here to vote for this game</p>
+          <button class="btn btn-block btn-outline-primary" (click)="onVote(g)">Vote</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
